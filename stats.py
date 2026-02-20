@@ -1,5 +1,19 @@
-def sort(sorting):
-    pass
+def addDict(dict1):
+    Liste_dicts = []
+    for k, v in dict1.items():
+        if k.isalpha():
+            element = {"char": k, "num": v}
+            Liste_dicts.append(element)
+        else:
+            continue
+    return Liste_dicts
+
+
+
+def sort_on(sorting):
+    sorting.sort(reverse=True, key=sort_on)
+
+    return sorting
 
 def count_char(file):
     chars = {}
