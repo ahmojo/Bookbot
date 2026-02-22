@@ -6,14 +6,17 @@ def addDict(dict1):
             Liste_dicts.append(element)
         else:
             continue
+    Liste_dicts.sort(reverse=True, key=sort_on)
     return Liste_dicts
 
 
 
-def sort_on(sorting):
-    sorting.sort(reverse=True, key=sort_on)
+def sort_on(mydict):
+    return mydict["num"]
 
-    return sorting
+   
+
+    
 
 def count_char(file):
     chars = {}
@@ -35,7 +38,7 @@ def count_words(file):
         count = len(words)
 
             
-        print(f"Found {count} total words")
+        return count
         
     
 
